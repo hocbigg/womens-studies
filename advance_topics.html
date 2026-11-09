@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Women&#x27;s Studies</title>
+  <meta name="description" content="Advanced Topics in Women&#x27;s Studies curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/women-studies/advance_topics.html">
+  <meta property="og:title" content="Advanced Topics in Women&#x27;s Studies">
+  <meta property="og:description" content="Advanced Topics in Women&#x27;s Studies curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/women-studies/advance_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/women-studies/">Women Studies</a></li>
+      <li><a href="/women-studies/advance_topics.html">Advance Topics</a></li>
+      <li><a href="https://github.com/hocbigg/women-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-womens-studies">Advanced Topics in Women's Studies</h1>
+<h2 id="queer-theory-and-transgender-studies">Queer Theory and Transgender Studies</h2>
+<p>The critical deconstruction of normative sexuality, binary gender constructs, and institutional heteronormativity through queer, trans, and intersectional theoretical frameworks.</p>
+<p><a href="https://books.google.com/books?isbn=9780814742341" target="_blank" rel="noopener noreferrer">Queer Theory: An Introduction (Annamarie Jagose)</a> - The primary introductory textbook for this subject, tracing the trajectory of queer theoretical concepts from early gay and lesbian liberation through poststructuralist critique.</p>
+<p><a href="https://oyc.yale.edu/english/engl-300/lecture-23" target="_blank" rel="noopener noreferrer">Yale OpenCourses ENGL 300 - Lecture 23: Queer Theory and Gender Performativity (Paul Fry / Yale University)</a> - A concise open video lecture that complements Jagose's survey by closely examining Judith Butler's gender performativity in dialogue with Michel Foucault's history of sexuality.</p>
+<p><a href="https://books.google.com/books?isbn=9781580056892" target="_blank" rel="noopener noreferrer">Transgender History: The Roots of Today's Revolution (Susan Stryker)</a> - A foundational historical narrative providing historical grounding in twentieth-century transgender activism, bodily autonomy, and evolving conceptual categories.</p>
+<p><a href="https://books.google.com/books?isbn=9780816630554" target="_blank" rel="noopener noreferrer">Disidentifications: Queers of Color and the Performance of Politics (José Esteban Muñoz)</a> - Builds upon foundational performativity theory by examining how racialized and queer subjects negotiate, resist, and transform dominant cultural ideologies.</p>
+<p><a href="https://ocw.mit.edu/courses/wgs-181-queer-cinema-and-visual-culture-fall-2017/" target="_blank" rel="noopener noreferrer">Queer Cinema and Visual Culture (MIT OpenCourseWare)</a> - An applied undergraduate course syllabus applying queer analytical frameworks to twentieth- and twenty-first-century film, censorship regimes, and visual representation.</p>
+<h2 id="feminist-science-technology-and-environmental-studies">Feminist Science, Technology, and Environmental Studies</h2>
+<p>How gender, race, and power relations intersect with scientific knowledge construction, technological design, and ecological systems.</p>
+<p><a href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank" rel="noopener noreferrer">Science Activism: Gender, Race, and Power (MIT OpenCourseWare)</a> - A complete university course framework investigating the politics of scientific institutions, environmental justice struggles, and the social responsibility of scientists.</p>
+<p><a href="https://books.google.com/books?isbn=9780415904841" target="_blank" rel="noopener noreferrer">Simians, Cyborgs, and Women: The Reinvention of Nature (Donna Haraway)</a> - The canonical text featuring "A Cyborg Manifesto" and "Situated Knowledges," challenging biological determinism and articulating how objectivity requires partial, accountable perspectives.</p>
+<p><a href="https://archive.org/details/ecofeminismwomen0000unse" target="_blank" rel="noopener noreferrer">Ecofeminism: Women, Animals, Nature (Greta Gaard, ed.)</a> - A freely accessible anthology articulating the philosophical and political connections between patriarchal domination, animal exploitation, and ecological degradation.</p>
+<p><a href="https://books.google.com/books?isbn=9780822339632" target="_blank" rel="noopener noreferrer">Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning (Karen Barad)</a> - An advanced theoretical work extending Haraway's insights into "agential realism," integrating quantum physics with feminist theory to rethink matter, performativity, and ethics.</p>
+<h2 id="feminist-epistemologies-and-knowledge-production">Feminist Epistemologies and Knowledge Production</h2>
+<p>The philosophical examination of how gender, race, and colonial hierarchies shape standards of evidence, credibility, and what counts as authoritative knowledge.</p>
+<p><a href="https://books.google.com/books?isbn=9780198237907" target="_blank" rel="noopener noreferrer">Epistemic Injustice: Power and the Ethics of Knowing (Miranda Fricker)</a> - The foundational philosophical text introducing testimonial and hermeneutical injustice, analyzing how prejudice systematically deflates a speaker's credibility or obscures social experience.</p>
+<p><a href="https://data-feminism.mitpress.mit.edu/" target="_blank" rel="noopener noreferrer">Data Feminism (Catherine D'Ignazio and Lauren F. Klein / MIT Press)</a> - An open-access book applying intersectional feminist epistemology to modern data science, setting out concrete principles for auditing power, binaries, and invisible labor in digital systems.</p>
+<p><a href="https://books.google.com/books?isbn=9781783604524" target="_blank" rel="noopener noreferrer">Decolonizing Methodologies: Research and Indigenous Peoples (Linda Tuhiwai Smith)</a> - A seminal critique of Western imperialist knowledge production, establishing frameworks for respectful, ethical inquiry centered on Indigenous sovereignty and standpoint.</p>
+<h2 id="feminist-political-economy-and-social-reproduction">Feminist Political Economy and Social Reproduction</h2>
+<p>The gendered dimensions of labor, global capitalism, unpaid domestic provisioning, and the legal structures governing human care.</p>
+<p><a href="https://books.google.com/books?isbn=9780415537490" target="_blank" rel="noopener noreferrer">Gender, Development, and Globalization: Economics as if All People Mattered (Lourdes Benería, Günseli Berik, and Maria Floro)</a> - The core survey textbook for this subject, methodically dismantling neoclassical economic assumptions by examining unpaid reproductive labor, care provisioning, and macroeconomic development.</p>
+<p><a href="https://archive.org/details/calibanwitchwome0000fede" target="_blank" rel="noopener noreferrer">Caliban and the Witch: Women, the Body and Primitive Accumulation (Silvia Federici, Internet Archive)</a> - A historical and theoretical primary text establishing how early capitalist development structurally depended on the enclosure of the commons and the subjugation of women's reproductive labor.</p>
+<p><a href="https://books.google.com/books?isbn=9780745339061" target="_blank" rel="noopener noreferrer">Social Reproduction Theory: Remapping Class, Recentering Oppression (Tithi Bhattacharya, ed.)</a> - An essential collection of contemporary theoretical essays analyzing how the daily replenishment and generational replacement of human labor power sustains the capitalist system.</p>
+<p><a href="https://books.google.com/books?isbn=9780805075090" target="_blank" rel="noopener noreferrer">Global Woman: Nannies, Maids, and Sex Workers in the New Economy (Barbara Ehrenreich and Arlie Russell Hochschild, eds.)</a> - An empirical anthology investigating transnational care chains, illustrating how the extraction of emotional and domestic labor connects women in the Global South with households in the Global North.</p>
+    </article>
+  </main>
+
+</body>
+</html>
